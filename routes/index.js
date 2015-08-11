@@ -7,10 +7,12 @@ router.get('/', function(req, res) {
   res.render('index', { community: config.community });
 });
 
+router.get('/invite', function(req, res) {
+  res.render('index', { community: config.community });
+});
+
 router.post('/invite', function(req, res) {
-  if(req.method == 'GET') {
-    res.redirect('/');
-  } else if (req.body.email) {
+  if (req.body.email) {
     request.post({
         url: 'https://'+ config.slackUrl + '/api/users.admin.invite',
         form: {
