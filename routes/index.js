@@ -8,7 +8,9 @@ router.get('/', function(req, res) {
 });
 
 router.post('/invite', function(req, res) {
-  if (req.body.email) {
+  if(req.method == 'GET') {
+    res.redirect('/');
+  } else if (req.body.email) {
     request.post({
         url: 'https://'+ config.slackUrl + '/api/users.admin.invite',
         form: {
