@@ -28,7 +28,8 @@ router.post('/invite', function(req, res) {
         if (err) { return res.send('Error:' + err); }
         body = JSON.parse(body);
         if (body.ok) {
-          res.send('Success! Check "'+ req.body.email +'" for an invite from Slack.');
+          res.render('success', { email: req.body.email } );
+          // res.send('Success! Check "'+ req.body.email +'" for an invite from Slack.');
         } else {
           res.send('Failed! ' + body.error)
         }
