@@ -1,0 +1,14 @@
+version: '2'
+services:
+  app:
+    build: .
+    volumes:
+      - ./:/srv/www
+    ports:
+      - "3000:3000"
+    environment:
+      SLACK_SUBDOMAIN: chicago-tech
+      SLACK_COC: https://goo.gl/PWhc3X
+      PORT: 3000
+    env_file:
+      ./secrets.env
