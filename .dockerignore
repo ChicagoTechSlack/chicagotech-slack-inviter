@@ -1,4 +1,4 @@
-node_modules
-node
-.next
+node_modules/
+.next/
 *.log
+app.json

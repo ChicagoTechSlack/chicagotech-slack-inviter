@@ -1,0 +1,15 @@
+version: "2"
+services:
+  node:
+    image: "node:12"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env.local
+    volumes:
+      - ./:/home/node/app
+    expose:
+      - "8081"
+    command: "yarn start"
