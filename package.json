@@ -1,6 +1,6 @@
 {
   "name": "chicagotech-slack-inviter",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "main": "index.js",
   "repository": "git@github.com:Spantree/chicagotech-slack-inviter.git",
   "author": "Cedric Hurst <cedric@spantree.net>",
