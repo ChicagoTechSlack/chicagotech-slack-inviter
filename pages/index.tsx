@@ -4,6 +4,6 @@ const App = () => {
   // Forward to the Shared Slack Invite Link
   const inviteLink = process.env.SLACK_INVITE_LINK;
   const refreshContentAttr = `0;url=${inviteLink}`;
-  return <meta http-equiv="refresh" content={refreshContentAttr} />;
+  return <meta httpEquiv="refresh" content={refreshContentAttr} />;
 };
 export default App;
