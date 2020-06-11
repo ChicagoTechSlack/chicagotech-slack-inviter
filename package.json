@@ -6,6 +6,10 @@
   "author": "Cedric Hurst <cedric@spantree.net>",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": "14.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
