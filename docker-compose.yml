@@ -6,10 +6,11 @@ services:
     working_dir: /home/node/app
     environment:
       - NODE_ENV=production
+      - PORT=3000
     env_file:
       - .env.local
     volumes:
       - ./:/home/node/app
-    expose:
-      - "8081"
-    command: "yarn start"
+    ports:
+      - "3001:3000"
+    command: "yarn dev"
