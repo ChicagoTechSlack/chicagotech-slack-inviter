@@ -1,12 +1,9 @@
 import React from "react";
 
-class App extends React.Component {
-  static async getInitialProps({ res }) {
-    // Forward to the Shared Slack Invite Link
-    // TODO: Make this nicer
-    const inviteLink = process.env.SLACK_INVITE_LINK;
-    res.writeHead(302, { Location: inviteLink });
-    res.end();
-  }
-}
+const App = () => {
+  // Forward to the Shared Slack Invite Link
+  const inviteLink = process.env.SLACK_INVITE_LINK;
+  const refreshContentAttr = `0;url=${inviteLink}`;
+  return <meta http-equiv="refresh" content={refreshContentAttr} />;
+};
 export default App;
